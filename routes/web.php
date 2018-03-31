@@ -11,6 +11,12 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+# user
+Route::match(['get', 'post'], '/users/index', 'UserController@index');
+Route::get('/users/create', 'UserController@create');
+Route::post('/users/store', 'UserController@store');
+Route::get('/users/show/{id}', 'UserController@show');
+Route::get('/users/edit/{id}', 'UserController@edit');
+Route::put('/users/update/{id}', 'UserController@update');
+Route::delete('/users/delete/{id}', 'UserController@destroy');
+# end user

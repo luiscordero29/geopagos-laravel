@@ -2,28 +2,17 @@
 
 namespace App;
 
-use Illuminate\Notifications\Notifiable;
-use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Database\Eloquent\Model;
+use Kblais\Uuid\Uuid;
 
-class User extends Authenticatable
+class User extends Model
 {
-    use Notifiable;
-
+    use Uuid;
+    
     /**
-     * The attributes that are mass assignable.
-     *
-     * @var array
-     */
-    protected $fillable = [
-        'name', 'email', 'password',
-    ];
-
-    /**
-     * The attributes that should be hidden for arrays.
-     *
-     * @var array
-     */
-    protected $hidden = [
-        'password', 'remember_token',
-    ];
+    * The table associated with the model.
+    *
+    * @var string
+    */
+    protected $table = 'users';
 }
