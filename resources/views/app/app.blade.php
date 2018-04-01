@@ -34,6 +34,7 @@
 	  		</div>
   		</div>
 	</nav>
+	<br />
 	@yield('content')
 	<!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

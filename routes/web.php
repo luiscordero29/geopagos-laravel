@@ -11,6 +11,10 @@
 |
 */
 
+# home 
+Route::get('/', 'HomeController@index');
+# end home
+
 # user
 Route::match(['get', 'post'], '/users/index', 'UserController@index');
 Route::get('/users/create', 'UserController@create');
