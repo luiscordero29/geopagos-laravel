@@ -15,4 +15,20 @@ class Favorite extends Model
     * @var string
     */
     protected $table = 'favorites';
+
+    /**
+     * User
+     */
+    public function user()
+    {
+        return $this->hasOne('App\User', 'id', 'user_id');
+    }
+
+    /**
+     * Favotite
+     */
+    public function favorite()
+    {
+        return $this->hasOne('App\User', 'id', 'favorite_id');
+    }
 }

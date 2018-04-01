@@ -14,11 +14,12 @@ class CreateUsersConstraints extends Migration
     public function up()
     {
         Schema::table('favorites', function (Blueprint $table) {
-            $table->foreign('user_id')->references('id')->on('users');
+            $table->foreign('user_id')->references('id')->on('users')->onUpdate('cascade')->onDelete('cascade');
+            $table->foreign('favorite_id')->references('id')->on('users')->onUpdate('cascade')->onDelete('cascade');
         });
         Schema::table('users_payments', function (Blueprint $table) {
-            $table->foreign('user_id')->references('id')->on('users');
-            $table->foreign('payment_id')->references('id')->on('payments');
+            $table->foreign('user_id')->references('id')->on('users')->onUpdate('cascade')->onDelete('cascade');
+            $table->foreign('payment_id')->references('id')->on('payments')->onUpdate('cascade')->onDelete('cascade');
         });
     }
 
@@ -31,6 +32,7 @@ class CreateUsersConstraints extends Migration
     {
         Schema::table('favorites', function (Blueprint $table) {
             $table->dropForeign('favorites_user_id_foreign');
+            $table->dropForeign('favorites_favorite_id_foreign');
         });
         Schema::table('users_payments', function (Blueprint $table) {
             $table->dropForeign('users_payments_user_id_foreign');

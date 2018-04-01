@@ -12,8 +12,8 @@
 			</div>
 			<div class="col-12">
 				<a href="{{ url('users/index') }}" class="btn btn-primary btn-lg">USUARIOS</a>
-				<a href="{{ url('users/index') }}" class="btn btn-primary btn-lg">FAVORITOS</a>
-				<a href="{{ url('users/index') }}" class="btn btn-primary btn-lg">PAGOS</a>
+				<a href="{{ url('favorites/index') }}" class="btn btn-primary btn-lg">FAVORITOS</a>
+				<a href="{{ url('payments/index') }}" class="btn btn-primary btn-lg">PAGOS</a>
             </div>
 		</div>
 	</div>

@@ -105,7 +105,7 @@ class UserController extends Controller
             return view('users.edit', ['data' => $data]);
         }else{
             # Error
-            return redirect('/users/index')->with('info', 'No se puede Ver el registro');
+            return redirect('/users/index')->with('info', 'No se puede Editar el registro');
         }
     }
 
@@ -164,7 +164,7 @@ class UserController extends Controller
             return redirect('/users/index')->with('success', 'Registro Eliminado');
         }else{
             # Error
-            return redirect('/users/index')->with('info', 'No se puede Ver el registro');
+            return redirect('/users/index')->with('info', 'No se puede Eliminar el registro');
         }
     }
 }

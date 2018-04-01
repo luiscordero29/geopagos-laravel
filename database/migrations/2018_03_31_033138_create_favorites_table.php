@@ -19,6 +19,7 @@ class CreateFavoritesTable extends Migration
             $table->collation = 'utf8_unicode_ci';
             $table->uuid('id');
             $table->uuid('user_id');
+            $table->uuid('favorite_id');
             $table->timestamps();
             $table->primary('id');
         });
