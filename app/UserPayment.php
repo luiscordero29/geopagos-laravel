@@ -15,4 +15,12 @@ class UserPayment extends Model
     * @var string
     */
     protected $table = 'users_payments';
+
+    /**
+     * User
+     */
+    public function user()
+    {
+        return $this->hasOne('App\User', 'id', 'user_id');
+    }
 }

@@ -36,11 +36,11 @@ Route::delete('/favorites/delete/{id}', 'FavoriteController@destroy');
 # end favorite
 
 # payments
-Route::match(['get', 'post'], '/payments/index', 'PaymentsController@index');
-Route::get('/payments/create', 'PaymentsController@create');
-Route::post('/payments/store', 'PaymentsController@store');
-Route::get('/payments/show/{id}', 'PaymentsController@show');
-Route::get('/payments/edit/{id}', 'PaymentsController@edit');
-Route::put('/payments/update/{id}', 'PaymentsController@update');
-Route::delete('/payments/delete/{id}', 'PaymentsController@destroy');
+Route::match(['get', 'post'], '/payments/index', 'PaymentController@index');
+Route::get('/payments/create', 'PaymentController@create');
+Route::post('/payments/store', 'PaymentController@store');
+Route::get('/payments/show/{id}', 'PaymentController@show');
+Route::get('/payments/edit/{id}', 'PaymentController@edit');
+Route::put('/payments/update/{id}', 'PaymentController@update');
+Route::delete('/payments/delete/{id}', 'PaymentController@destroy');
 # end payments
